@@ -13,17 +13,15 @@ function createTimeoutWindow(){
 };
 
 function invokeAlert(){
-const sec = parseFloat($('#secondLeft').text());
-const message = $('#message').text();
-//console.log(sec);
-window.setTimeout(function(){
-	let timeOutWindow = createTimeoutWindow();
-	soundClick();
-	timeOutWindow.setTimeout(function(){ timeOutWindow.alert(message);}, 1000);
-	timeOutWindow.setTimeout(function(){ window.close();}, 2000);
+	const sec = parseFloat($('#secondLeft').text());
+	const message = $('#message').text();
+	window.setTimeout(function(){
+		let timeOutWindow = createTimeoutWindow();
+		soundClick();
+		timeOutWindow.setTimeout(function(){ timeOutWindow.alert(message);}, 1000);
+		timeOutWindow.setTimeout(function(){ window.close();}, 2000);
 	}, (sec - 3) * 1000);
 };
-
 
 $( document ).ready(function() {
    window.setTimeout(invokeAlert,2000);
