@@ -2,20 +2,23 @@
     "manifest_version": 2,
 
     "name": "Task Viewer",
+	
     "version": "1.0",
 	
- "permissions": [
+    "permissions": [
           "storage"
         ],
- "icons": {
+	
+     "icons": {
        "16": "16x16.png"
 
-   },
+      },
+	
    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
  
-    "browser_action": {
+   "browser_action": {
         "default_title": "gfgf",
-       "default_icon": "48x48.png",
+        "default_icon": "48x48.png",
         "default_popup": "popup.html"
     }
  }
